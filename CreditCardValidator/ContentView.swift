@@ -49,3 +49,25 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
+func isValidNumber(_ input: String) -> Bool {
+    let num = input.replacingOccurrences(of: "-", with: "")
+    let count = num.count
+    var sum = 0
+    var secondDigit = false
+    
+    for i in (0..<count).reversed() {
+        let index = num.index(num.startIndex, offsetBy: i)
+        var digit = num[index].wholeNumberValue!
+        
+        if (secondDigit) {
+            digit *= 2
+        }
+        
+        sum += digit / 10
+        sum += digit % 10
+        secondDigit.toggle()
+    }
+    
+    return (sum % 10) == 0
+}
