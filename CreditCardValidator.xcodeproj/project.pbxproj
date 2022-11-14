@@ -33,6 +33,7 @@
 		64C334AD2921EB0600BB8570 /* CreditCardValidatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CreditCardValidatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		64C334B12921EB0600BB8570 /* CreditCardValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardValidatorTests.swift; sourceTree = "<group>"; };
 		64C334CA2921EB5600BB8570 /* CreditCardValidator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CreditCardValidator.entitlements; sourceTree = "<group>"; };
+		64C334CB2921EBB400BB8570 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +57,7 @@
 		64C334942921EB0000BB8570 = {
 			isa = PBXGroup;
 			children = (
+				64C334CB2921EBB400BB8570 /* .gitignore */,
 				64C3349F2921EB0000BB8570 /* CreditCardValidator */,
 				64C334B02921EB0600BB8570 /* CreditCardValidatorTests */,
 				64C3349E2921EB0000BB8570 /* Products */,
