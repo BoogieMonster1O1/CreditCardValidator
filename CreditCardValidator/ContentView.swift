@@ -23,7 +23,7 @@ struct ContentView: View {
                     .padding(.all)
                     .accessibilityLabel("Credit Card Number")
                 Button(action: {
-                    
+                    valid = isValidNumber(text)
                 }, label: {
                     Text("Verify")
                         .padding(.all)
