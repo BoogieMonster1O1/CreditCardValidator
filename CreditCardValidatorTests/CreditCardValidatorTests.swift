@@ -9,28 +9,35 @@ import XCTest
 @testable import CreditCardValidator
 
 class CreditCardValidatorTests: XCTestCase {
+    private var validNumbers: [String] = []
+    private var invalidNumbers: [String] = []
 
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        validNumbers.append("5555-5555-5555-4444")
+        validNumbers.append("5555555555554444")
+        validNumbers.append("4012-8888-8888-1881")
+        validNumbers.append("4012888888881881")
+        validNumbers.append("4111111111111111")
+        validNumbers.append("6011000990139424")
+        validNumbers.append("3566002020360505")
+        validNumbers.append("352906116405822")
+        
+        invalidNumbers.append("3566002020360506")
+        invalidNumbers.append("4111111111111112")
+        invalidNumbers.append("5012-8888-8888-1881")
+        invalidNumbers.append("452906116405822")
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        invalidNumbers.removeAll()
     }
 
     func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+        for num in validNumbers {
+            XCTAssertTrue(isValidNumber(num))
+        }
+        for num in invalidNumbers {
+            XCTAssertFalse(isValidNumber(num))
         }
     }
-
 }

@@ -71,3 +71,10 @@ func isValidNumber(_ input: String) -> Bool {
     
     return (sum % 10) == 0
 }
+
+extension String {
+    var isNumber: Bool {
+        let digitsCharacters = CharacterSet(charactersIn: "0123456789")
+        return CharacterSet(charactersIn: self).isSubset(of: digitsCharacters)
+    }
+}
